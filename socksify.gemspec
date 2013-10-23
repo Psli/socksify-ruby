@@ -1,14 +1,12 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-
-spec = Gem::Specification.new do |s|
+Gem::Specification.new do |s|
   s.name = 'socksify'
-  s.version = "1.5.0"
+  s.version = "1.5.1"
   s.summary = "Redirect all TCPSockets through a SOCKS5 proxy"
   s.authors = ["Stephan Maka", "Andrey Kouznetsov", "Christopher Thorpe", "Musy Bite", "Yuichi Tateno", "David Dollar"]
   s.email = "stephan@spaceboyz.net"
-  s.homepage = "http://socksify.rubyforge.org/"
+  s.homepage = "http://github.com/musybite/socksify-ruby"
   s.rubyforge_project = 'socksify'
   s.files = %w{COPYING}
   s.files += Dir.glob("lib/**/*")
@@ -19,9 +17,4 @@ spec = Gem::Specification.new do |s|
   s.executables = %w{socksify_ruby}
   s.has_rdoc = false
   s.extra_rdoc_files = Dir.glob("doc/**/*") + %w{COPYING}
-end
-
-if $0 == __FILE__
-  require 'rubygems/builder'
-  Gem::Builder.new(spec).build
 end
